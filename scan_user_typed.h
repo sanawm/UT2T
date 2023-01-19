@@ -1,0 +1,1 @@
+char* scan_user_typed();
