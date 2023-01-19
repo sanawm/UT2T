@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include"login.h"
-//we pass the head of account list and user typed to this function
+//we pass the head of account list and user typed to this function :)
 typedef struct post post; 
 struct post{
     int likes;
