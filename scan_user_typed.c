@@ -7,7 +7,7 @@ char* scan_user_typed(){
     int size=0;
     int counter=0;
     char c='\0';
-    while(c!='\n') //Receive user_typed
+    while(c!='\n') //Receive user_typed until got to enter
     {
         size++;
         c=getchar();
@@ -15,7 +15,7 @@ char* scan_user_typed(){
         user_typed=(char*)realloc(user_typed,((1+size)*sizeof(char)));
         counter++;
     }
-            user_typed[counter-1]='\0';
-            return user_typed;
-            free(user_typed);
+    user_typed[counter-1]='\0';
+    return user_typed;
+    free(user_typed);
 }

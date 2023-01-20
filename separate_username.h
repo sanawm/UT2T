@@ -1,0 +1,1 @@
+char* separate_username(char* user_typed);

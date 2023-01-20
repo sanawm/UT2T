@@ -9,24 +9,26 @@ struct post{
 };
 typedef struct user user; 
 struct user{
-    char name[10];
-    char password[10];
+    char* name;
+    char* password;
     post all_post[10];
     int post_id;
     user *next;
-
 };
 user* signup_user(){
+    char* name;
+    char* password;
     user *new_user=(user*)malloc(1*sizeof(user));
     printf("You chose signup:\n");
     printf("Enter your name:");
-    scanf("%s",new_user->name);
+    name=scan_user_typed();
+    new_user->name=name;
     printf("Enter your password:");
-    scanf("%s",new_user->password);
+    password=scan_user_typed();
+    new_user->password=password;
     printf("Congratulations, your account has been created\n");
     new_user->post_id=0;
     new_user->next=NULL;
     return new_user;
     free(new_user);
-
 }
